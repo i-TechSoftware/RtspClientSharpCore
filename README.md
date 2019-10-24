@@ -12,6 +12,6 @@ Please read the original documentation at: https://github.com/BogdanovKirill/Rts
 
 ## Linux dependencies
 
-Installed package ffmpeg version 4.2.1
-Installed package dotnet-sdk 3.0
-Installed package dotnet-runtime 3.0
+- Installed package ffmpeg version 4.2.1
+- Installed package dotnet-sdk 3.0
+- Installed package dotnet-runtime 3.0

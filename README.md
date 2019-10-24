@@ -15,3 +15,10 @@ Please read the original documentation at: https://github.com/BogdanovKirill/Rts
 - Installed package ffmpeg version 4.2.1
 - Installed package dotnet-sdk 3.0
 - Installed package dotnet-runtime 3.0
+
+## Test on Linux
+
+Type:
+`$ dotnet TestRtspClient.dll`
+
+![](https://pandao.github.io/editor.md/examples/images/4.jpg)

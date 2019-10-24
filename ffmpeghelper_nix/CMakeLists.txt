@@ -148,15 +148,11 @@ endif(CMAKE_SIZEOF_VOID_P MATCHES 8)
 
 set(FFmpeg_ROOT "/usr" CACHE PATH "Root of FFmpeg library (libAV)")
 set(FFmpeg_ROOT "/usr")
-find_library(FFTW3_LIBRARIES avcodec )
-message(TEST1: ${FFTW3_LIBRARIES})
-message( FFmpeg_ROOT: ${FFmpeg_ROOT})
 foreach (lib "libavformat.so.58" "libavcodec.so.58" "libavutil.so.56" "libswscale.so.5" "libavdevice.so.58" "libavfilter.so.7" "libpostproc.so.55" "libswresample.so.3" "libswscale.so.5")
 
     # Library files
 
     find_library(${lib}_LIB_RELEASE "${lib}" PATHS ${FFmpeg_ROOT}/lib/${PROJECT_ARCH} NO_DEFAULT_PATH)
-    message(${${lib}_LIB_RELEASE})
     if (NOT ${lib}_LIB_RELEASE)
         message(FATAL_ERROR "Could not find release version of library \"${lib}\"")
     endif()
@@ -169,13 +165,6 @@ foreach (lib "libavformat.so.58" "libavcodec.so.58" "libavutil.so.56" "libswscal
             $<$<CONFIG:Release>:${${lib}_LIB_RELEASE}>
             $<$<CONFIG:Debug>:${${lib}_LIB_DEBUG}>
             )
-
-    # Header file
-    #find_path(${lib}_INCLUDE "lib${lib}/${lib}.h" PATHS ${FFmpeg_ROOT}/include)
-    #if (NOT ${lib}_INCLUDE)
-    #    message(FATAL_ERROR "Could not find header file of library \"${lib}\"")
-    #endif()
-    #target_include_directories(${PROJECT_NAME} PRIVATE ${${lib}_INCLUDE})
 endforeach()
 
 

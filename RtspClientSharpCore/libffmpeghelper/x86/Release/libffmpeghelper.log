@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  audiodecoding.cpp
+  dllmain.cpp
+  videodecoding.cpp
+     Creating library I:\TestProjects\RtspClientSharp-master\Examples\libffmpeghelper\x86\Release\libffmpeghelper.lib and object I:\TestProjects\RtspClientSharp-master\Examples\libffmpeghelper\x86\Release\libffmpeghelper.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 16 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  libffmpeghelper.vcxproj -> I:\TestProjects\RtspClientSharp-master\Examples\libffmpeghelper\x86\Release\libffmpeghelper.dll

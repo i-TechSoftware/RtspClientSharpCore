@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ffmpeghelper"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/alex/ffmpeghelper/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/alex/ffmpeghelper/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ffmpeghelper">
+				<Option output="/alex/ffmpeghelper/cmake-build-debug/libffmpeghelper.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/alex/ffmpeghelper/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/alex/ffmpeghelper/include"/>
+					<Add directory="/alex/ffmpeghelper/include/libavcodec"/>
+					<Add directory="/alex/ffmpeghelper/include/libavdevice"/>
+					<Add directory="/alex/ffmpeghelper/include/libavfilter"/>
+					<Add directory="/alex/ffmpeghelper/include/libavformat"/>
+					<Add directory="/alex/ffmpeghelper/include/libavutil"/>
+					<Add directory="/alex/ffmpeghelper/include/libpostproc"/>
+					<Add directory="/alex/ffmpeghelper/include/libswresample"/>
+					<Add directory="/alex/ffmpeghelper/include/libswscale"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 ffmpeghelper"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ffmpeghelper/fast">
+				<Option output="/alex/ffmpeghelper/cmake-build-debug/libffmpeghelper.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/alex/ffmpeghelper/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/alex/ffmpeghelper/include"/>
+					<Add directory="/alex/ffmpeghelper/include/libavcodec"/>
+					<Add directory="/alex/ffmpeghelper/include/libavdevice"/>
+					<Add directory="/alex/ffmpeghelper/include/libavfilter"/>
+					<Add directory="/alex/ffmpeghelper/include/libavformat"/>
+					<Add directory="/alex/ffmpeghelper/include/libavutil"/>
+					<Add directory="/alex/ffmpeghelper/include/libpostproc"/>
+					<Add directory="/alex/ffmpeghelper/include/libswresample"/>
+					<Add directory="/alex/ffmpeghelper/include/libswscale"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 ffmpeghelper/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/alex/ffmpeghelper/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/alex/ffmpeghelper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/alex/ffmpeghelper/audiodecoding.cpp">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/export.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/ac3_parser.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/adts_parser.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/avcodec.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/avdct.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/avfft.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/d3d11va.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/dirac.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/dv_profile.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/dxva2.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/jni.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/mediacodec.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/qsv.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/vaapi.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/vdpau.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/version.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/videotoolbox.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/vorbis_parser.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavcodec/xvmc.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavdevice/avdevice.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavdevice/version.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavfilter/avfilter.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavfilter/buffersink.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavfilter/buffersrc.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavfilter/version.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavformat/avformat.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavformat/avio.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavformat/version.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/adler32.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/aes.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/aes_ctr.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/attributes.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/audio_fifo.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/avassert.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/avconfig.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/avstring.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/avutil.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/base64.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/blowfish.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/bprint.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/bswap.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/buffer.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/camellia.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/cast5.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/channel_layout.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/common.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/cpu.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/crc.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/des.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/dict.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/display.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/downmix_info.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/encryption_info.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/error.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/eval.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/ffversion.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/fifo.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/file.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/frame.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hash.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hmac.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_cuda.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_d3d11va.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_drm.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_dxva2.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_mediacodec.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_qsv.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_vaapi.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_vdpau.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/hwcontext_videotoolbox.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/imgutils.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/intfloat.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/intreadwrite.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/lfg.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/log.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/lzo.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/macros.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/mastering_display_metadata.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/mathematics.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/md5.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/mem.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/motion_vector.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/murmur3.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/opt.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/parseutils.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/pixdesc.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/pixelutils.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/pixfmt.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/random_seed.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/rational.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/rc4.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/replaygain.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/ripemd.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/samplefmt.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/sha.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/sha512.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/spherical.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/stereo3d.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/tea.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/threadmessage.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/time.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/timecode.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/timestamp.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/tree.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/twofish.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/version.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libavutil/xtea.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libpostproc/postprocess.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libpostproc/version.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libswresample/swresample.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libswresample/version.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libswscale/swscale.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/include/libswscale/version.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/libffmpeghelper.cpp">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/stdafx.cpp">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/stdafx.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/targetver.h">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/videodecoding.cpp">
+			<Option target="ffmpeghelper"/>
+		</Unit>
+		<Unit filename="/alex/ffmpeghelper/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

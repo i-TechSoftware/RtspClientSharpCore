@@ -1,0 +1,11 @@
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\bin\Debug\netcoreapp3.0\TestSnapshotMakerCore.exe
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\obj\Debug\netcoreapp3.0\TestSnapshotMakerCore.csprojAssemblyReference.cache
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\obj\Debug\netcoreapp3.0\TestSnapshotMakerCore.AssemblyInfoInputs.cache
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\obj\Debug\netcoreapp3.0\TestSnapshotMakerCore.AssemblyInfo.cs
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Configuration.dll
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Configuration.Abstractions.dll
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Configuration.CommandLine.dll
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Primitives.dll
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\obj\Debug\netcoreapp3.0\TestSnapshotMakerCore.csproj.CopyComplete
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\bin\Debug\netcoreapp3.0\RtspClientSharpCore.dll
+I:\TestProjects\RtspClientSharpCore\TestSnapshotMakerCore\bin\Debug\netcoreapp3.0\RtspClientSharpCore.pdb

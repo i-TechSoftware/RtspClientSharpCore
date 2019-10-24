@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  audiodecoding.cpp
+  dllmain.cpp
+  videodecoding.cpp
+  Generating Code...
+     Creating library I:\TestProjects\RtspClientSharp-master\Examples\libffmpeghelper\x86\Debug\libffmpeghelper.lib and object I:\TestProjects\RtspClientSharp-master\Examples\libffmpeghelper\x86\Debug\libffmpeghelper.exp
+  libffmpeghelper.vcxproj -> I:\TestProjects\RtspClientSharp-master\Examples\libffmpeghelper\x86\Debug\libffmpeghelper.dll

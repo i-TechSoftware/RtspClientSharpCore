@@ -1,0 +1,15 @@
+/home/alex/downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /alex/ffmpeghelper
+TEST1:FFTW3_LIBRARIES-NOTFOUND
+FFmpeg_ROOT:/usr
+/usr/lib/x86_64-linux-gnu/libavformat.so.58
+/usr/lib/x86_64-linux-gnu/libavcodec.so.58
+/usr/lib/x86_64-linux-gnu/libavutil.so.56
+/usr/lib/x86_64-linux-gnu/libswscale.so.5
+/usr/lib/x86_64-linux-gnu/libavdevice.so.58
+/usr/lib/x86_64-linux-gnu/libavfilter.so.7
+/usr/lib/x86_64-linux-gnu/libpostproc.so.55
+/usr/lib/x86_64-linux-gnu/libswresample.so.3
+/usr/lib/x86_64-linux-gnu/libswscale.so.5
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /alex/ffmpeghelper/cmake-build-debug

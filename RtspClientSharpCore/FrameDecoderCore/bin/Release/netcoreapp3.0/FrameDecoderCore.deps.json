@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "FrameDecoderCore/1.0.0": {
+        "dependencies": {
+          "RtspClientSharpCore": "1.0.0"
+        },
+        "runtime": {
+          "FrameDecoderCore.dll": {}
+        }
+      },
+      "RtspClientSharpCore/1.0.0": {
+        "runtime": {
+          "RtspClientSharpCore.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FrameDecoderCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RtspClientSharpCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

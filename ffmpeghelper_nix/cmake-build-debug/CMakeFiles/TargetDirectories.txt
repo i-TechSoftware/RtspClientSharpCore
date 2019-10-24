@@ -1,0 +1,3 @@
+/alex/ffmpeghelper/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/alex/ffmpeghelper/cmake-build-debug/CMakeFiles/ffmpeghelper.dir
+/alex/ffmpeghelper/cmake-build-debug/CMakeFiles/edit_cache.dir

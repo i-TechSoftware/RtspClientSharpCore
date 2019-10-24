@@ -3,6 +3,9 @@ This repo contains fork (https://github.com/BogdanovKirill/RtspClientSharp  for 
 
 Please read the original documentation at: https://github.com/BogdanovKirill/RtspClientSharp/blob/master/README.md
 
+The test client connects to the Rtsp stream at rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov
+If the test client reports a connection failure, check the availability of this link.  If the link is not available, you can use any of your links to the rtsp stream.
+
 ## Differences from the original version:
 
 - ffmpeghelper_nix folder contains a version project of ffmpeghelper built under Ubuntu 18.06 x64 (cmake)

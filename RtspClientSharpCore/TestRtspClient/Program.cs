@@ -127,20 +127,20 @@ namespace TestRtspClient
                 byte[] managedArray = new byte[pictureSize*4];
                 Marshal.Copy(unmanagedPointer, managedArray, 0, pictureSize*4);
                 Marshal.FreeHGlobal(unmanagedPointer);
-                Console.WriteLine($"Frame was successfully decoded! {_FrameType } Trying to save to BMP file...");
+                Console.WriteLine($"Frame was successfully decoded! {_FrameType } Trying to save to JPG file...");
                 try
                 {
                     var im = CopyDataToBitmap(managedArray);
-                    if (isWindows)
+                   if (isWindows)
                     {
                         // Change to your path
-                        im.Save(@"E:\TestPhoto\image21.bmp");
+                        im.Save(@"E:\TestPhoto\image21.jpg", ImageFormat.Jpeg);
                         return;
                     }
                     if (isLinux)
                     {
                         // Change to your path
-                        im.Save(@"/home/alex/image21.bmp");
+                        im.Save(@"/home/alex/image21.jpg", ImageFormat.Jpeg);
                         return;
                     }
                     throw new PlatformNotSupportedException("Not supported OS platform!!");

@@ -18,10 +18,12 @@ If the test client reports a connection failure, check the availability of this 
 - Installed package ffmpeg version 4.2.1
 - Installed package dotnet-sdk 3.0
 - Installed package dotnet-runtime 3.0
+- Installed package libgdiplus
 
 ## Test on Linux
 
 Type:
 `$ dotnet TestRtspClient.dll`
+Note: Change path to save jpg file (in TestRtspClient/Program.cs:143)
 
 ![](https://github.com/i-TechSoftware/RtspClientSharpCore/blob/master/LinuxTestConsole.jpg)

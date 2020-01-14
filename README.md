@@ -24,6 +24,7 @@ If the test client reports a connection failure, check the availability of this 
 
 Type:
 `$ dotnet TestRtspClient.dll`
+
 Note: Change path to save jpg file (in TestRtspClient/Program.cs:143)
 
 ![](https://github.com/i-TechSoftware/RtspClientSharpCore/blob/master/LinuxTestConsole.jpg)

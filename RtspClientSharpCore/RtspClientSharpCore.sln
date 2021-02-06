@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameDecoderCore", "FrameDe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libffmpeghelper", "libffmpeghelper\libffmpeghelper.vcxproj", "{3C96BD24-3212-4CD8-86E3-63D1E3E38155}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSnapshotMakerCore", "TestSnapshotMakerCore\TestSnapshotMakerCore.csproj", "{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,18 @@ Global
 		{3C96BD24-3212-4CD8-86E3-63D1E3E38155}.Release|x64.Build.0 = Release|x64
 		{3C96BD24-3212-4CD8-86E3-63D1E3E38155}.Release|x86.ActiveCfg = Release|Win32
 		{3C96BD24-3212-4CD8-86E3-63D1E3E38155}.Release|x86.Build.0 = Release|Win32
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Debug|x64.Build.0 = Debug|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Debug|x86.Build.0 = Debug|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Release|x64.ActiveCfg = Release|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Release|x64.Build.0 = Release|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Release|x86.ActiveCfg = Release|Any CPU
+		{0BCF5B70-E74C-41E9-A94D-FE3EB885DE3E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -38,6 +38,41 @@ namespace TestRtspClient
       var connectionParameters = new ConnectionParameters(serverUri/*, credentials*/);
 
       SaveManyPicture(connectionParameters);
+      //SaveOnePicture(connectionParameters).Wait();
+    }
+
+    private static async Task SaveOnePicture(ConnectionParameters connectionParameters)
+    {
+      Bitmap bitmap = null;
+      try
+      {
+        var cancellationTokenSource = new CancellationTokenSource();
+
+        using var rtspClient = new RtspClient(connectionParameters);
+        rtspClient.FrameReceived += delegate (object o, RawFrame rawFrame)
+        {
+          if (!(rawFrame is RtspClientSharpCore.RawFrames.Video.RawVideoFrame rawVideoFrame))
+            return;
+
+          var decodedFrame = FrameDecoder.TryDecode(rawVideoFrame);
+
+          if (decodedFrame == null) return;
+
+          bitmap = FrameTransformer.TransformToBitmap(decodedFrame);
+          cancellationTokenSource.Cancel();
+        };
+
+        Console.WriteLine("Connecting...");
+        await rtspClient.ConnectAsync(cancellationTokenSource.Token);
+        Console.WriteLine("Connected.");
+        await rtspClient.ReceiveAsync(cancellationTokenSource.Token);
+
+      }
+      catch (OperationCanceledException)
+      {
+      }
+      Console.WriteLine("Saving...");
+      bitmap?.Save(Path.Combine(pathToSaveImage, "image.jpg"), ImageFormat.Jpeg);
     }
 
     private static void SaveManyPicture(ConnectionParameters connectionParameters)

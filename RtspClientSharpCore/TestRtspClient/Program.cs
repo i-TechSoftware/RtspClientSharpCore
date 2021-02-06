@@ -1,202 +1,135 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
-using FrameDecoderCore;
-using FrameDecoderCore.DecodedFrames;
 using RtspClientSharpCore;
-using RtspClientSharpCore.RawFrames.Video;
-using RtspClientSharpCore.Rtsp;
-using FrameDecoderCore.FFmpeg;
 using RtspClientSharpCore.RawFrames;
-using PixelFormat = FrameDecoderCore.PixelFormat;
 
 namespace TestRtspClient
 {
-    class Program
+  class Program
+  {
+    // TODO: Change to your values
+    private const string urlToCamera = "rtsp://192.168.0.90:554/onvif1";
+//    private const string urlToCamera = "rtsp://MirrorBoy:123454321@192.168.0.189/h264Preview_01_main";
+    private const string pathToSaveImage = @"D:\Downloads\";
+    private const int streamWidth = 2560;//240;
+    private const int streamHeight = 1440;//160;
+
+    //public static event EventHandler<IDecodedVideoFrame> FrameReceived;
+    private static readonly bool IsWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+    private static readonly bool IsLinux = RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
+    private static int _imageNumber = 1;
+    private static readonly FrameDecoder FrameDecoder = new FrameDecoder();
+    private static readonly FrameTransformer FrameTransformer = new FrameTransformer(streamWidth, streamHeight);
+
+
+    static void Main()
     {
+      Console.WriteLine($"Platform {RuntimeInformation.OSDescription} {RuntimeInformation.OSArchitecture}");
 
-        private const int STREAM_WIDTH = 240;
-        private const int STREAM_HEIGHT = 160;
-        private static readonly Dictionary<FFmpegVideoCodecId, FFmpegVideoDecoder> _videoDecodersMap =
-            new Dictionary<FFmpegVideoCodecId, FFmpegVideoDecoder>();
-        //public static event EventHandler<IDecodedVideoFrame> FrameReceived;
-        private static bool isWindows;
-        private static bool isLinux;
-        static void Main(string[] args)
+      var serverUri = new Uri(urlToCamera);
+      //var credentials = new NetworkCredential("admin", "admin12345678");
+
+      var connectionParameters = new ConnectionParameters(serverUri/*, credentials*/);
+
+      SaveManyPicture(connectionParameters);
+    }
+
+    private static void SaveManyPicture(ConnectionParameters connectionParameters)
+    {
+      var cancellationTokenSource = new CancellationTokenSource();
+
+      var connectTask = ConnectAsync(connectionParameters, cancellationTokenSource.Token);
+
+      Console.WriteLine("Press any key to cancel");
+      Console.ReadLine();
+
+      cancellationTokenSource.Cancel();
+
+      Console.WriteLine("Canceling");
+      connectTask.Wait(CancellationToken.None);
+    }
+
+    private static async Task ConnectAsync(ConnectionParameters connectionParameters, CancellationToken token)
+    {
+      try
+      {
+        var delay = TimeSpan.FromSeconds(5);
+
+        using (var rtspClient = new RtspClient(connectionParameters))
         {
-            isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
-            isLinux = RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
-            
+          rtspClient.FrameReceived += RtspClient_FrameReceived;
 
-            Console.WriteLine($"Platform {RuntimeInformation.OSDescription} {RuntimeInformation.OSArchitecture}");
-            var serverUri = new Uri("rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov");
-            //var credentials = new NetworkCredential("admin", "admin12345678");
-
-            var connectionParameters = new ConnectionParameters(serverUri/*, credentials*/);
-            var cancellationTokenSource = new CancellationTokenSource();
-
-            Task connectTask = ConnectAsync(connectionParameters, cancellationTokenSource.Token);
-
-            Console.WriteLine("Press any key to cancel");
-            Console.ReadLine();
-
-            cancellationTokenSource.Cancel();
-
-            Console.WriteLine("Canceling");
-            connectTask.Wait(CancellationToken.None);
-        }
-
-
-        private static async Task ConnectAsync(ConnectionParameters connectionParameters, CancellationToken token)
-        {
+          while (true)
+          {
             try
             {
-                TimeSpan delay = TimeSpan.FromSeconds(5);
-
-                using (var rtspClient = new RtspClient(connectionParameters))
-                {
-                    rtspClient.FrameReceived += RtspClient_FrameReceived;
-
-                    while (true)
-                    {
-                        Console.WriteLine("Connecting...");
-
-                        try
-                        {
-                            await rtspClient.ConnectAsync(token);
-                        }
-                        catch (OperationCanceledException)
-                        {
-                            return;
-                        }
-                        catch (RtspClientException e)
-                        {
-                            Console.WriteLine(e.ToString());
-                            await Task.Delay(delay, token);
-                            continue;
-                        }
-
-                        Console.WriteLine("Connected.");
-
-                        try
-                        {
-                            await rtspClient.ReceiveAsync(token);
-                        }
-                        catch (OperationCanceledException)
-                        {
-                            return;
-                        }
-                        catch (RtspClientException e)
-                        {
-                            Console.WriteLine(e.ToString());
-                            await Task.Delay(delay, token);
-                        }
-                    }
-                }
+              Console.WriteLine("Connecting...");
+              await rtspClient.ConnectAsync(token);
+              Console.WriteLine("Connected.");
+              await rtspClient.ReceiveAsync(token);
             }
             catch (OperationCanceledException)
             {
+              return;
             }
-        }
-
-        private static void RtspClient_FrameReceived(object sender, RawFrame rawFrame)
-        {
-            
-            if (!(rawFrame is RawVideoFrame rawVideoFrame))
-                return;
-
-            FFmpegVideoDecoder decoder = GetDecoderForFrame(rawVideoFrame);
-            IDecodedVideoFrame decodedFrame = decoder.TryDecode(rawVideoFrame);
-
-            if (decodedFrame != null) 
+            catch (RtspClientSharpCore.Rtsp.RtspClientException e)
             {
-                var _FrameType = rawFrame is RawH264IFrame ? "IFrame" : "PFrame";
-                TransformParameters _transformParameters = new TransformParameters(RectangleF.Empty,
-                    new Size(STREAM_WIDTH, STREAM_HEIGHT),
-                    ScalingPolicy.Stretch, PixelFormat.Bgra32, ScalingQuality.FastBilinear);
-
-                var pictureSize = STREAM_WIDTH* STREAM_HEIGHT;
-                IntPtr unmanagedPointer = Marshal.AllocHGlobal(pictureSize*4);
-
-                decodedFrame.TransformTo(unmanagedPointer, STREAM_WIDTH*4, _transformParameters);
-                byte[] managedArray = new byte[pictureSize*4];
-                Marshal.Copy(unmanagedPointer, managedArray, 0, pictureSize*4);
-                Marshal.FreeHGlobal(unmanagedPointer);
-                Console.WriteLine($"Frame was successfully decoded! {_FrameType } Trying to save to JPG file...");
-                try
-                {
-                    var im = CopyDataToBitmap(managedArray);
-                   if (isWindows)
-                    {
-                        // Change to your path
-                        im.Save(@"E:\TestPhoto\image21.jpg", ImageFormat.Jpeg);
-                        return;
-                    }
-                    if (isLinux)
-                    {
-                        // Change to your path
-                        im.Save(@"/home/alex/image21.jpg", ImageFormat.Jpeg);
-                        return;
-                    }
-                    throw new PlatformNotSupportedException("Not supported OS platform!!");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"Error saving to file: {e.Message}");
-                    Debug.WriteLine($"Error saving to file: {e.Message}");
-                    Debug.WriteLine($"Stack trace: {e.StackTrace}");
-                }
+              Console.WriteLine(e.ToString());
+              await Task.Delay(delay, token);
             }
-           
+          }
         }
-
-
-        private static Bitmap CopyDataToBitmap(byte[] data)
-        {
-            //Here create the Bitmap to the know height, width and format
-            Bitmap bmp = new Bitmap( STREAM_WIDTH, STREAM_HEIGHT, System.Drawing.Imaging.PixelFormat.Format32bppArgb);  
-
-            //Create a BitmapData and Lock all pixels to be written 
-            BitmapData bmpData = bmp.LockBits(
-                new Rectangle(0, 0, bmp.Width, bmp.Height),   
-                ImageLockMode.WriteOnly, bmp.PixelFormat);
- 
-            //Copy the data from the byte array into BitmapData.Scan0
-            Marshal.Copy(data, 0, bmpData.Scan0, data.Length);
-            //Unlock the pixels
-            bmp.UnlockBits(bmpData);
-            //Return the bitmap 
-            return bmp;
-        }
-
-        private static FFmpegVideoDecoder GetDecoderForFrame(RawVideoFrame videoFrame)
-        {
-            FFmpegVideoCodecId codecId = DetectCodecId(videoFrame);
-            if (!_videoDecodersMap.TryGetValue(codecId, out FFmpegVideoDecoder decoder))
-            {
-                decoder = FFmpegVideoDecoder.CreateDecoder(codecId);
-                _videoDecodersMap.Add(codecId, decoder);
-            }
-
-            return decoder;
-        }
-
-        private static FFmpegVideoCodecId DetectCodecId(RawVideoFrame videoFrame)
-        {
-            if (videoFrame is RawJpegFrame)
-                return FFmpegVideoCodecId.MJPEG;
-            if (videoFrame is RawH264Frame)
-                return FFmpegVideoCodecId.H264;
-
-            throw new ArgumentOutOfRangeException(nameof(videoFrame));
-        }
-
-
-       
+      }
+      catch (OperationCanceledException)
+      {
+      }
     }
+
+    private static void RtspClient_FrameReceived(object sender, RtspClientSharpCore.RawFrames.RawFrame rawFrame)
+    {
+      if (!(rawFrame is RtspClientSharpCore.RawFrames.Video.RawVideoFrame rawVideoFrame))
+        return;
+
+      var decodedFrame = FrameDecoder.TryDecode(rawVideoFrame);
+
+      if (decodedFrame == null) 
+        return;
+
+      var bitmap = FrameTransformer.TransformToBitmap(decodedFrame);
+
+      var fileName = $"image{_imageNumber++}.jpg";
+
+      var frameType = rawFrame is RtspClientSharpCore.RawFrames.Video.RawH264IFrame ? "IFrame" : "PFrame";
+      Console.WriteLine($"Frame was successfully decoded! {frameType} Trying to save to JPG file {fileName}...");
+
+      try
+      {
+        if (IsWindows)
+        {
+          bitmap.Save(Path.Combine(pathToSaveImage, fileName), ImageFormat.Jpeg);
+          return;
+        }
+        if (IsLinux)
+        {
+          // Change to your path
+          bitmap.Save(@"/home/alex/image21.jpg", ImageFormat.Jpeg);
+          return;
+        }
+        throw new PlatformNotSupportedException("Not supported OS platform!!");
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine($"Error saving to file: {e.Message}");
+        Debug.WriteLine($"Error saving to file: {e.Message}");
+        Debug.WriteLine($"Stack trace: {e.StackTrace}");
+      }
+    }
+
+  }
 }

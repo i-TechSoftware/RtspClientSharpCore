@@ -1,7 +1,0 @@
-I:\!ITS\Projects\ITS\Development\RtspClientSharpCore\RtspClientSharpCore\bin\x64\Debug\netcoreapp3.0\RtspClientSharpCore.deps.json
-I:\!ITS\Projects\ITS\Development\RtspClientSharpCore\RtspClientSharpCore\bin\x64\Debug\netcoreapp3.0\RtspClientSharpCore.dll
-I:\!ITS\Projects\ITS\Development\RtspClientSharpCore\RtspClientSharpCore\bin\x64\Debug\netcoreapp3.0\RtspClientSharpCore.pdb
-I:\!ITS\Projects\ITS\Development\RtspClientSharpCore\RtspClientSharpCore\obj\x64\Debug\netcoreapp3.0\RtspClientSharpCore.AssemblyInfoInputs.cache
-I:\!ITS\Projects\ITS\Development\RtspClientSharpCore\RtspClientSharpCore\obj\x64\Debug\netcoreapp3.0\RtspClientSharpCore.AssemblyInfo.cs
-I:\!ITS\Projects\ITS\Development\RtspClientSharpCore\RtspClientSharpCore\obj\x64\Debug\netcoreapp3.0\RtspClientSharpCore.dll
-I:\!ITS\Projects\ITS\Development\RtspClientSharpCore\RtspClientSharpCore\obj\x64\Debug\netcoreapp3.0\RtspClientSharpCore.pdb

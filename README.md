@@ -1,4 +1,4 @@
-# C# RTSP Client for .NET Core 3.0
+# C# RTSP Client for .NET Core 3.0 / .NET 5.0
 This repo contains fork (https://github.com/BogdanovKirill/RtspClientSharp  for .NET Standard 2.0) of C# RTSP client implementation for .Net Core 3.0
 
 Please read the original documentation at: https://github.com/BogdanovKirill/RtspClientSharp/blob/master/README.md

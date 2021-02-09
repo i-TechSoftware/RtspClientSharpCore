@@ -25,7 +25,7 @@ namespace TestSnapshotMakerCore
         static void Main(string[] args)
         {
             var parser = Parser.Default.ParseArguments<Options>(args);
-            parser.Value
+            //parser.Value
 
             Parser.Default.ParseArguments<Options>(args)
                 .WithParsed(options =>

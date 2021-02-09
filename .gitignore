@@ -1,0 +1,13 @@
+/RtspClientSharpCore/FrameDecoderCore/bin/
+/RtspClientSharpCore/FrameDecoderCore/obj/
+/RtspClientSharpCore/.vs/
+/RtspClientSharpCore/RtspClientSharpCore/bin/
+/RtspClientSharpCore/RtspClientSharpCore/obj/
+/RtspClientSharpCore/TestRtspClient/bin/
+/RtspClientSharpCore/TestRtspClient/obj/
+/RtspClientSharpCore/libffmpeghelper/x64/Debug
+/RtspClientSharpCore/TestSnapshotMakerCore/.vs/
+/RtspClientSharpCore/TestSnapshotMakerCore/bin/
+/RtspClientSharpCore/TestSnapshotMakerCore/obj/
+/.vs
+/ffmpeghelper_nix/out/build/
